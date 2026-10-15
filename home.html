@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+        /* Force body to span the full width and height of the screen */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            overflow-x: hidden; /* Prevent horizontal side scrolling */
+        }
+
+        nav {
+            background: orange;
+            padding: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 60px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-greeting {
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: auto;
+            padding-left: 15px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+                height: auto;
+            }
+
+            .nav-greeting {
+                margin-right: 0;
+                padding-left: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Hero container spans full layout area and keeps background picture */
+        .home {
+            min-height: calc(100vh - 60px);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* BACKGROUND PICTURE PRESERVED */
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)),
+                url('lam).jpg') no-repeat center center/cover;
+            
+            box-sizing: border-box;
+        }
+
+        /* Glass container expanded to 100% full screen width over the background picture */
+        .content-container {
+            /* Semi-transparent glass background to let the background picture show through */
+            background: rgba(255, 255, 255, 0.08); 
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            
+            /* Force absolute 100% full width across the display screen */
+            width: 100%; 
+            min-height: calc(100vh - 60px);
+            border-left: none;
+            border-right: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            
+            /* Center align everything cleanly inside the massive banner layout */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 10%; /* Provides 10% breathing room on the extreme edges */
+            box-sizing: border-box;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Picture stretches nicely across the widescreen interface */
+        .home-picture {
+            width: 100%;
+            max-width: 1100px; /* Enhanced width limit to suit a full-screen block */
+            height: 35vh; /* Dynamically sizes to 35% of the screen height */
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .image-caption {
+            color: #ffb84d;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+
+        .home h1 {
+            font-size: clamp(26px, 4.5vh, 42px);
+            margin: 0 0 25px 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Paragraph spreads wider across the modern landscape screen canvas */
+        .home p {
+            font-size: clamp(16px, 2.2vh, 20px); 
+            line-height: 1.7;
+            margin: 0 auto 20px auto;
+            color: #f0f0f0;
+            max-width: 1200px; /* Expanded limit to use up the horizontal layout width */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 30px 20px;
+            }
+
+            .home-picture {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-greeting">
+            👋Hi! Welcome To MY Shop
+        </div>
+
+        <a href="home.html">🏭Home</a>
+        <a href="About.html">❓About</a>
+        <a href="Products.html">📦Products</a>
+        <a href="Contact.html">💬Contact</a>
+        <a href="Films.html">🎥Films</a>
+        <a href="index.html">🚪Logout</a>
+    </nav>
+
+    <div class="home">
+        <div class="content-container">
+
+            <!-- HOME PICTURE -->
+            <img src="244.jpg" alt="My Shop" class="home-picture">
+            
+            <div class="image-caption">
+                My Shop
+                <h1>Welcome sir/Ma'am!</h1>
+            </div>
+
+            <p>
+                Discovering new lifestyle products and immersing yourself
+                in your favorite films represent two of modern life's
+                greatest sensory pleasures, effortlessly intertwining to
+                cultivate an elevated everyday experience. Cinema acts as
+                a dynamic, living lookbook where meticulously designed sets
+                and iconic character styles inspire our personal tastes,
+                turning on-screen aesthetics into tangible reality.
+                By integrating premium audiovisual technology, curated home
+                decor, and artisanal comforts into our viewing spaces, the
+                simple act of watching a movie transforms into a luxurious
+                ritual.
+            </p>
+
+            <p>
+                Ultimately, this seamless synergy between digital
+                entertainment and physical consumer discovery enhances our
+                surroundings, allowing us to mirror the curated beauty of
+                film within our own lives. Our goal is to make shopping and
+                entertainment simple, enjoyable, and exciting for everyone.
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>
